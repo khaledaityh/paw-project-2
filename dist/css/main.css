@@ -20,11 +20,59 @@ body {
   color: #555;
   position: relative;
 }
-
-.section-hero {
-  background-color: #fdf2e9;
-  padding: 4.8rem 0 9.6rem 0;
+.logo {
+  height: 2.2rem;
 }
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2.8rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #e67e22;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdf2e9;
+
+  /* Because we want header to be sticky later */
+  height: 9.6rem;
+  padding: 0 1.8rem;
+  position: relative;
+}
+
+/* .section-hero {
+  background-color: #be7636;
+  padding: 4.8rem 0 9.6rem 0;
+} */
 
 .heading-primary {
   font-size: 5.2rem;
@@ -46,6 +94,7 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 9.6rem;
   align-items: center;
+  background-color: #fdf2e9;
 }
 .hero-description {
   font-size: 2rem;
@@ -120,7 +169,8 @@ body {
   background-color: #fff;
   color: #555;
 }
-.btn--outline:link:hover, .btn--outline:link:active,
+.btn--outline:link:hover,
+.btn--outline:link:active,
 .btn--outline:visited:hover,
 .btn--outline:visited:active {
   background-color: #fccba3;
@@ -183,6 +233,7 @@ body {
   text-transform: uppercase;
   margin-top: 10px;
   cursor: pointer;
+  border: none;
 }
 .container button.hidden {
   background-color: transparent;
@@ -240,11 +291,13 @@ body {
 }
 
 @keyframes move {
-  0%, 49.99% {
+  0%,
+  49.99% {
     opacity: 0;
     z-index: 1;
   }
-  50%, 100% {
+  50%,
+  100% {
     opacity: 1;
     z-index: 5;
   }
@@ -337,7 +390,7 @@ body {
   height: 150%;
   width: 100%;
   -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
   z-index: 1;
 }
 
@@ -351,4 +404,4 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
